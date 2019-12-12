@@ -1,22 +1,21 @@
-<meta charset="UTF-8">
-
-<script>
-
-  function pulaLinha() {
-  
-      document.write("<br>");
+function calculaImc(peso, altura) {
+  return peso / (altura * altura);
   }
-  
-  function mostra(frase) {
-  
-    document.write(frase);
-    pulaLinha();
-  }
-  
-  var pesoPessoa = 73;
-  var alturaPessoa = 1.71;
-  
-  var imcPessoa = pesoPessoa / (alturaPessoa * alturaPessoa);
-  
-  mostra("O imc da pessoa é " + imcPessoa);
-  
+
+  var nome = prompt("Informe seu nome")
+  var alturaInformada = prompt(nome + ", informe sua altura");
+  var pesoInformado = prompt(nome + ", informe seu peso");
+  var imc = calculaImc(pesoInformado,alturaInformada);
+
+  console.log (nome+ ", o seu imc é: " + imc);
+
+    if (imc < 18){
+        console.log("Voce esta com peso abaixo do recomendado")
+    }
+    if (imc > 25){
+        console.log("Voce esta com sobrepeso")
+    }
+    if (imc >=18 && imc <=25){
+        console.log("Voce esta com peso dentro do esperado")
+    }
+ 
